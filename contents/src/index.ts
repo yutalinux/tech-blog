@@ -55,6 +55,7 @@ export function getPosts(): Post[] {
   const packageDir = path.resolve(dirname, "..");
 
   const posts = readdirSync(path.resolve(packageDir, POST_DIR));
+
   return posts
     .map((post) => {
       const fp = path.resolve(packageDir, POST_DIR, post);
