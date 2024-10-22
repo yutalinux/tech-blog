@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { type Post, getPosts } from "@repo/contents";
+
+export async function getStaticPaths() {
+  const pages = getPosts();
+
+  return pages.map((page) => {
+    return {
+      params: {
+        slug: page.slug,
+      },
+      props: page,
+    };
+  });
+}
+
+type Props = Post;
+
+const page = Astro.props;
+---
+
+<Layout title={page.title}>
+  {page.body}
+</Layout>

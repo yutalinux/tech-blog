@@ -19,10 +19,13 @@ importers:
         version: 0.9.4(typescript@5.6.3)
       '@astrojs/tailwind':
         specifier: ^5.1.2
-        version: 5.1.2(astro@4.16.6(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
+        version: 5.1.2(astro@4.16.6(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
+      '@repo/contents':
+        specifier: workspace:*
+        version: link:../contents
       astro:
         specifier: ^4.16.6
-        version: 4.16.6(rollup@4.24.0)(typescript@5.6.3)
+        version: 4.16.6(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3)
       tailwindcss:
         specifier: ^3.4.14
         version: 3.4.14
@@ -32,9 +35,21 @@ importers:
 
   contents:
     dependencies:
+      gray-matter:
+        specifier: ^4.0.3
+        version: 4.0.3
       textlint:
         specifier: ^14.2.1
         version: 14.2.1
+    devDependencies:
+      '@repo/tsconfig':
+        specifier: workspace:*
+        version: link:../packages/tsconfig
+      '@types/node':
+        specifier: ^22.7.8
+        version: 22.7.8
+
+  packages/tsconfig: {}
 
 packages:
 
@@ -682,6 +697,9 @@ packages:
 
   '@types/nlcst@2.0.3':
     resolution: {integrity: sha512-vSYNSDe6Ix3q+6Z7ri9lyWqgGhJTmzRjZRqyq15N0Z/1/UnVsno9G/N40NBijoYx2seFDIl0+B2mgAb9mezUCA==}
+
+  '@types/node@22.7.8':
+    resolution: {integrity: sha512-a922jJy31vqR5sk+kAdIENJjHblqcZ4RmERviFsER4WJcEONqxKcjNOlk0q7OUfrF5sddT+vng070cdfMlrPLg==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -2331,6 +2349,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
 
@@ -2723,9 +2744,9 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/tailwind@5.1.2(astro@4.16.6(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)':
+  '@astrojs/tailwind@5.1.2(astro@4.16.6(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)':
     dependencies:
-      astro: 4.16.6(rollup@4.24.0)(typescript@5.6.3)
+      astro: 4.16.6(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -3352,6 +3373,10 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/node@22.7.8':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/unist@2.0.11': {}
 
   '@types/unist@3.0.3': {}
@@ -3456,7 +3481,7 @@ snapshots:
 
   astral-regex@2.0.0: {}
 
-  astro@4.16.6(rollup@4.24.0)(typescript@5.6.3):
+  astro@4.16.6(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -3512,8 +3537,8 @@ snapshots:
       tsconfck: 3.1.4(typescript@5.6.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 5.4.9
-      vitefu: 1.0.3(vite@5.4.9)
+      vite: 5.4.9(@types/node@22.7.8)
+      vitefu: 1.0.3(vite@5.4.9(@types/node@22.7.8))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -5436,6 +5461,8 @@ snapshots:
 
   typescript@5.6.3: {}
 
+  undici-types@6.19.8: {}
+
   unified@11.0.5:
     dependencies:
       '@types/unist': 3.0.3
@@ -5551,17 +5578,18 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@5.4.9:
+  vite@5.4.9(@types/node@22.7.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.0
     optionalDependencies:
+      '@types/node': 22.7.8
       fsevents: 2.3.3
 
-  vitefu@1.0.3(vite@5.4.9):
+  vitefu@1.0.3(vite@5.4.9(@types/node@22.7.8)):
     optionalDependencies:
-      vite: 5.4.9
+      vite: 5.4.9(@types/node@22.7.8)
 
   volar-service-css@0.0.61(@volar/language-service@2.4.6):
     dependencies:

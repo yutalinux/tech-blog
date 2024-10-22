@@ -1,7 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getPosts } from "@repo/contents";
+
+const posts = getPosts();
 ---
 
 <Layout title="">
-  <main></main>
+  <main>
+    {
+      posts.map((post) => {
+        return <a href={`/tech-blog/${post.slug}`}>{post.title}</a>;
+      })
+    }
+  </main>
 </Layout>
