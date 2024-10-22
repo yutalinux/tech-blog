@@ -1,8 +1,11 @@
 {
   "name": "@repo/remark-message-plugin",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
   "dependencies": {
     "hastscript": "^9.0.0",
     "unified": "^11.0.5",

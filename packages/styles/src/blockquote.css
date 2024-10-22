@@ -4,13 +4,12 @@
   }
 
   blockquote:before {
-    content: "";
+    content: "format_quote";
+    font-family: "Material Symbols Outlined";
     display: block;
     width: 28px;
     height: 28px;
-    background-color: white;
-    mask-image: url("/blog/format-quote.svg");
-    mask-repeat: no-repeat;
-    mask-size: contain;
+    line-height: 28px;
+    font-size: 28px;
   }
 }

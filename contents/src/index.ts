@@ -32,7 +32,7 @@ export interface Post {
   /**
    * 更新日
    */
-  updatedDate: string;
+  updatedDate?: string;
 
   /**
    * タグ
