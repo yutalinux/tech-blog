@@ -1,0 +1,11 @@
+{
+  "name": "tech-blog",
+  "private": false,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": ""
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}
