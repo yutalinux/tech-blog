@@ -1,0 +1,10 @@
+{
+  "name": "contents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "textlint": "^14.2.1"
+  }
+}
