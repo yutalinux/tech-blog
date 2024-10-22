@@ -6,7 +6,6 @@
   "exports": {
     ".": "./src/index.ts"
   },
-  "scripts": {},
   "dependencies": {
     "gray-matter": "^4.0.3",
     "textlint": "^14.2.1"
