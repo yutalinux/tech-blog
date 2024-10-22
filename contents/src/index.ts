@@ -51,7 +51,7 @@ export interface Post {
  */
 export function getPosts(): Post[] {
   // @ts-ignore
-  const dirname = import.meta.dirname;
+  // const dirname = import.meta.dirname;
   // const packageDir = path.resolve(dirname, "..");
   const packageDir = "../contents";
 
