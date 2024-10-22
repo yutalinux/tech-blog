@@ -23,6 +23,9 @@ importers:
       '@repo/contents':
         specifier: workspace:*
         version: link:../contents
+      '@repo/styles':
+        specifier: workspace:*
+        version: link:../packages/styles
       astro:
         specifier: ^4.16.6
         version: 4.16.6(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3)
@@ -48,6 +51,8 @@ importers:
       '@types/node':
         specifier: ^22.7.8
         version: 22.7.8
+
+  packages/styles: {}
 
   packages/tsconfig: {}
 
