@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { markdownToHtml } from "@repo/parser";
 
 import { type Post, getPosts } from "@repo/contents";
 
@@ -19,8 +20,25 @@ export async function getStaticPaths() {
 type Props = Post;
 
 const page = Astro.props;
+
+const pubDate = new Date(page.pubDate);
+const updatedDate = new Date(page.updatedDate);
 ---
 
 <Layout title={page.title}>
-  {page.body}
+  <main>
+    <article class="blog-article">
+      <h1>{page.title}</h1>
+      <p>{page.description}</p>
+      <p class="mt-2 flex gap-4">
+        <time datetime={pubDate.toISOString()}>
+          公開日{pubDate.toLocaleDateString("ja-jp")}
+        </time>
+        <time datetime={updatedDate.toISOString()}>
+          更新日{updatedDate.toLocaleDateString("ja-jp")}
+        </time>
+      </p>
+      <div set:html={markdownToHtml(page.body)} />
+    </article>
+  </main>
 </Layout>

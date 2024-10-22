@@ -3,7 +3,8 @@
   "private": false,
   "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "build": ""
+    "build": "turbo run build",
+    "dev": "turbo run dev"
   },
   "devDependencies": {
     "turbo": "latest"

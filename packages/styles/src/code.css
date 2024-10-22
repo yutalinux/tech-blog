@@ -1,0 +1,13 @@
+.blog-article {
+  pre {
+    /* 視覚整形モデル */
+    @apply p-2;
+
+    /* ボックスモデル */
+    @apply relative;
+  }
+
+  pre code {
+    @apply rounded;
+  }
+}

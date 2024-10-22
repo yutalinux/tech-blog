@@ -1,7 +1,9 @@
 {
   "name": "@repo/styles",
   "version": "1.0.0",
-  "files": [
-    "style.css"
-  ]
+  "exports": {
+    ".": {
+      "default": "./src/style.css"
+    }
+  }
 }

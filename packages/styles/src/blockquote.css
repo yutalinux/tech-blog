@@ -1,0 +1,16 @@
+.blog-article {
+  blockquote {
+    @apply relative border-l-4 border-emerald-800 pl-2;
+  }
+
+  blockquote:before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    mask-image: url("/blog/format-quote.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+}

@@ -1,0 +1,17 @@
+.blog-article {
+  ul,
+  ol {
+    /* ボックスモデル */
+    @apply pl-5;
+  }
+
+  ul li {
+    /* 視覚整形モデル */
+    @apply list-disc;
+  }
+
+  ol li {
+    /* 視覚整形モデル */
+    @apply list-decimal;
+  }
+}

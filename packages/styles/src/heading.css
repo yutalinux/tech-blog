@@ -1,0 +1,81 @@
+.blog-article {
+  --link-move-y: 48px;
+
+  h1 {
+    /* ボックスモデル */
+    @apply my-4;
+
+    /* フォント */
+    @apply text-5xl my-4;
+  }
+
+  h2 {
+    --h2-link-fix: 48px;
+    --h2-margin: 16px;
+    --h2-padding: 4px;
+
+    /* 余白 */
+    @apply mb-[var(--h2-margin)] pb-[var(--h2-padding)];
+
+    margin-top: calc(var(--link-move-y) * -1);
+    padding-top: calc(
+      var(--link-move-y) + var(--h2-margin) + var(--h2-padding)
+    );
+
+    /* 見た目 */
+    @apply text-4xl relative z-[2];
+
+    @apply border-b border-neutral-600;
+
+    &::before {
+      content: "##";
+      top: calc(var(--h2-link-fix) + var(--h2-margin));
+      @apply mr-2 text-gray-400;
+    }
+  }
+
+  h3 {
+    --h2-margin: 12px;
+    --h2-padding: 4px;
+
+    /* 余白 */
+    @apply mb-[var(--h2-margin)] pb-[var(--h2-padding)];
+
+    margin-top: calc(var(--link-move-y) * -1);
+    padding-top: calc(
+      var(--link-move-y) + var(--h2-margin) + var(--h2-padding)
+    );
+
+    /* 見た目 */
+    @apply text-3xl relative z-[2];
+
+    &::before {
+      content: "###";
+      top: calc(var(--h2-link-fix) + var(--h2-margin));
+      @apply mr-2 text-gray-400;
+    }
+  }
+
+  h4 {
+    --h2-link-fix: 48px;
+    --h2-margin: 12px;
+    --h2-padding: 4px;
+
+    /* 余白 */
+    @apply mb-[var(--h2-margin)] pb-[var(--h2-padding)];
+
+    margin-top: calc(var(--h2-link-fix) * -1);
+    padding-top: calc(
+      var(--h2-link-fix) + var(--h2-margin) + var(--h2-padding)
+    );
+
+    /* 見た目 */
+    @apply text-2xl relative z-[2];
+
+    &::before {
+      content: "####";
+      top: calc(var(--h2-link-fix) + var(--h2-margin));
+      @apply mr-2 text-gray-400;
+    }
+  }
+}

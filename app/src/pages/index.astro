@@ -5,12 +5,14 @@ import { getPosts } from "@repo/contents";
 const posts = getPosts();
 ---
 
-<Layout title="">
+<Layout title="Blog">
   <main>
-    {
-      posts.map((post) => {
-        return <a href={`/tech-blog/${post.slug}`}>{post.title}</a>;
-      })
-    }
+    <article>
+      {
+        posts.map((post) => {
+          return <a href={`/tech-blog/${post.slug}`}>{post.title}</a>;
+        })
+      }
+    </article>
   </main>
 </Layout>
