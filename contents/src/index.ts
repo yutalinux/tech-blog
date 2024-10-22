@@ -52,7 +52,8 @@ export interface Post {
 export function getPosts(): Post[] {
   // @ts-ignore
   const dirname = import.meta.dirname;
-  const packageDir = path.resolve(dirname, "..");
+  // const packageDir = path.resolve(dirname, "..");
+  const packageDir = "../contents";
 
   const posts = readdirSync(path.resolve(packageDir, POST_DIR));
 
