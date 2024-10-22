@@ -50,21 +50,22 @@ export interface Post {
  * @returns 記事の一覧データ
  */
 export function getPosts(): Post[] {
-  console.log(process.cwd());
   // @ts-ignore
   const dirname = import.meta.dirname;
   const packageDir = path.resolve(dirname, "..");
 
   const posts = readdirSync(path.resolve(packageDir, POST_DIR));
-  return posts.map((post) => {
-    const fp = path.resolve(packageDir, POST_DIR, post);
-    const parsePath = path.parse(fp);
-    const stat = statSync(fp);
-    if (parsePath.ext !== ".md" || !stat.isFile()) return;
-    const { data, content } = matter({ content: readFileSync(fp, "utf-8") });
-    let result = data as Post;
-    result.slug = parsePath.name;
-    result.body = content;
-    return result;
-  });
+  return posts
+    .map((post) => {
+      const fp = path.resolve(packageDir, POST_DIR, post);
+      const parsePath = path.parse(fp);
+      const stat = statSync(fp);
+      if (parsePath.ext !== ".md" || !stat.isFile()) return;
+      const { data, content } = matter({ content: readFileSync(fp, "utf-8") });
+      let result = data as Post;
+      result.slug = parsePath.name;
+      result.body = content;
+      return result;
+    })
+    .filter((post) => post);
 }
