@@ -10,5 +10,3 @@
 | ├ `config`             | ツール類のコンフィグファイル |
 | ├ `parser`             | マークダウンのパーサー       |
 | ├ `remark-note-plugin` | remark プラグイン            |
-| ├ `styles`             | ブログのスタイル (css)       |
-| ├ `ui`                 | ui コンポーネント (react)    |
