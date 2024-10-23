@@ -32,12 +32,6 @@ importers:
       '@repo/parser':
         specifier: workspace:*
         version: link:../packages/parser
-      '@repo/styles':
-        specifier: workspace:*
-        version: link:../packages/styles
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../packages/ui
       '@types/react':
         specifier: ^18.3.11
         version: 18.3.11
@@ -47,6 +41,9 @@ importers:
       astro:
         specifier: ^4.16.6
         version: 4.16.6(@types/node@22.7.8)(rollup@4.24.0)(terser@5.36.0)(typescript@5.6.3)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
@@ -62,6 +59,46 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
+    devDependencies:
+      '@chromatic-com/storybook':
+        specifier: ^1.9.0
+        version: 1.9.0(react@18.3.1)
+      '@storybook/addon-essentials':
+        specifier: ^8.3.6
+        version: 8.3.6(storybook@8.3.6)(webpack-sources@3.2.3)
+      '@storybook/addon-interactions':
+        specifier: ^8.3.6
+        version: 8.3.6(storybook@8.3.6)
+      '@storybook/addon-links':
+        specifier: ^8.3.6
+        version: 8.3.6(react@18.3.1)(storybook@8.3.6)
+      '@storybook/addon-onboarding':
+        specifier: ^8.3.6
+        version: 8.3.6(react@18.3.1)(storybook@8.3.6)
+      '@storybook/addon-styling-webpack':
+        specifier: ^1.0.0
+        version: 1.0.0(storybook@8.3.6)(webpack@5.95.0(esbuild@0.21.5))
+      '@storybook/addon-themes':
+        specifier: ^8.3.6
+        version: 8.3.6(storybook@8.3.6)
+      '@storybook/blocks':
+        specifier: ^8.3.6
+        version: 8.3.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)
+      '@storybook/react':
+        specifier: ^8.3.6
+        version: 8.3.6(@storybook/test@8.3.6(storybook@8.3.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)(typescript@5.6.3)
+      '@storybook/react-vite':
+        specifier: ^8.3.6
+        version: 8.3.6(@storybook/test@8.3.6(storybook@8.3.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(storybook@8.3.6)(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))(webpack-sources@3.2.3)
+      '@storybook/test':
+        specifier: ^8.3.6
+        version: 8.3.6(storybook@8.3.6)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.4.47
+      storybook:
+        specifier: ^8.3.6
+        version: 8.3.6
 
   contents:
     dependencies:
@@ -119,76 +156,6 @@ importers:
       unist-util-visit:
         specifier: ^5.0.0
         version: 5.0.0
-
-  packages/styles:
-    devDependencies:
-      tailwindcss:
-        specifier: ^3.4.14
-        version: 3.4.14
-
-  packages/ui:
-    dependencies:
-      '@repo/styles':
-        specifier: workspace:*
-        version: link:../styles
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@chromatic-com/storybook':
-        specifier: ^1.9.0
-        version: 1.9.0(react@18.3.1)
-      '@repo/config':
-        specifier: workspace:*
-        version: link:../config
-      '@storybook/addon-essentials':
-        specifier: ^8.3.6
-        version: 8.3.6(storybook@8.3.6)(webpack-sources@3.2.3)
-      '@storybook/addon-interactions':
-        specifier: ^8.3.6
-        version: 8.3.6(storybook@8.3.6)
-      '@storybook/addon-links':
-        specifier: ^8.3.6
-        version: 8.3.6(react@18.3.1)(storybook@8.3.6)
-      '@storybook/addon-onboarding':
-        specifier: ^8.3.6
-        version: 8.3.6(react@18.3.1)(storybook@8.3.6)
-      '@storybook/addon-styling-webpack':
-        specifier: ^1.0.0
-        version: 1.0.0(storybook@8.3.6)(webpack@5.95.0(esbuild@0.21.5))
-      '@storybook/addon-themes':
-        specifier: ^8.3.6
-        version: 8.3.6(storybook@8.3.6)
-      '@storybook/blocks':
-        specifier: ^8.3.6
-        version: 8.3.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)
-      '@storybook/react':
-        specifier: ^8.3.6
-        version: 8.3.6(@storybook/test@8.3.6(storybook@8.3.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)(typescript@5.6.3)
-      '@storybook/react-vite':
-        specifier: ^8.3.6
-        version: 8.3.6(@storybook/test@8.3.6(storybook@8.3.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(storybook@8.3.6)(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))(webpack-sources@3.2.3)
-      '@storybook/test':
-        specifier: ^8.3.6
-        version: 8.3.6(storybook@8.3.6)
-      '@types/react':
-        specifier: ^18.3.11
-        version: 18.3.11
-      prop-types:
-        specifier: ^15.8.1
-        version: 15.8.1
-      storybook:
-        specifier: ^8.3.6
-        version: 8.3.6
-      tailwindcss:
-        specifier: ^3.4.14
-        version: 3.4.14
 
 packages:
 
