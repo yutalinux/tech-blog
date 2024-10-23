@@ -82,20 +82,10 @@ export default function ThemeMenu() {
     }
   }, [theme]);
 
-  const colors = clsx(
-    "bg-neutral-100 dark:bg-neutral-900",
-    "text-neutral-900 dark:text-neutral-100",
-    "border-neutral-300 dark:border-neutral-600"
-  );
-
-  const select = clsx(
-    "pl-2 pr-5 py-1 rounded-md border flex gap-2 mb-1",
-    colors
-  );
-
+  const select = clsx("pl-2 pr-5 py-1 rounded-md border flex gap-2");
   const dialog = clsx(
     "px-2 py-1 rounded-md border absolute w-fit right-0",
-    colors
+    "text-neutral-900 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-900"
   );
 
   return (

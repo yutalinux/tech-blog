@@ -1,36 +1,38 @@
-.note {
-  @apply flex gap-2 p-2 rounded-md text-neutral-100;
-}
+.blog-article {
+  .note {
+    @apply flex gap-2 p-2 rounded-md text-neutral-100;
+  }
 
-.note p {
-  @apply m-0;
-}
+  .note p {
+    @apply m-0;
+  }
 
-.note::before {
-  font-family: "Material Symbols Outlined";
-  @apply block h-6 w-6 leading-6 text-2xl z-10;
-}
+  .note::before {
+    font-family: "Material Symbols Outlined";
+    @apply block h-6 w-6 leading-6 text-2xl z-10;
+  }
 
-.info {
-  @apply bg-lime-800;
-}
+  .info {
+    @apply bg-lime-800;
+  }
 
-.info::before {
-  content: "check_circle";
-}
+  .info::before {
+    content: "check_circle";
+  }
 
-.warn {
-  @apply bg-yellow-700;
-}
+  .warn {
+    @apply bg-yellow-700;
+  }
 
-.warn::before {
-  content: "error";
-}
+  .warn::before {
+    content: "error";
+  }
 
-.alert {
-  @apply bg-red-800;
-}
+  .alert {
+    @apply bg-red-800;
+  }
 
-.alert::before {
-  content: "cancel";
+  .alert::before {
+    content: "cancel";
+  }
 }

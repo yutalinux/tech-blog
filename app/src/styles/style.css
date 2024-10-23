@@ -24,15 +24,15 @@
 * {
   /* 視覚整形モデル */
   @apply relative z-[5];
+  @apply border-neutral-300 dark:border-neutral-600;
 }
 
 body {
   @apply flex flex-col min-h-screen;
 
   /* 色 */
-  @apply bg-neutral-100 dark:bg-neutral-900;
   @apply text-neutral-900 dark:text-neutral-100;
-  @apply border-neutral-300 dark:border-neutral-600;
+  @apply bg-neutral-100 dark:bg-neutral-900;
 }
 
 main {
@@ -53,6 +53,16 @@ article {
 
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
+}
+
+.github-icon {
+  background: url("/tech-blog/github-mark.svg");
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.dark .github-icon {
+  background: url("/tech-blog/github-mark-white.svg");
 }
 
 .blog-article {
