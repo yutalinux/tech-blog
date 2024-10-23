@@ -19,5 +19,6 @@ export const Default: Story = {
   args: {
     title: "タイトル",
     description: "説明文です",
+    slug: "",
   },
 };
