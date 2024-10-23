@@ -110,7 +110,7 @@ export default function ThemeMenu() {
         }}
       >
         <span className="material-symbols-outlined">{iconName}</span>
-        <span className="absolute material-symbols-outlined right-0">
+        <span className="absolute block material-symbols-outlined right-0 w-6">
           arrow_drop_down
         </span>
       </button>

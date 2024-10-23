@@ -27,13 +27,17 @@
 }
 
 body {
+  @apply flex flex-col min-h-screen;
+
   /* 色 */
-  @apply text-neutral-900 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-900;
+  @apply bg-neutral-100 dark:bg-neutral-900;
+  @apply text-neutral-900 dark:text-neutral-100;
+  @apply border-neutral-300 dark:border-neutral-600;
 }
 
 main {
   /* 視覚整形モデル */
-  @apply flex flex-col gap-6;
+  @apply flex flex-col gap-6 flex-1;
 
   /* ボックスモデル */
   @apply mx-auto py-4 max-w-[800px] w-full;
@@ -45,9 +49,6 @@ article {
 
   /* ボックスモデル */
   @apply px-6 py-2 rounded-lg;
-
-  /* 色 */
-  @apply bg-neutral-200 dark:bg-neutral-800;
 }
 
 .material-symbols-outlined {
