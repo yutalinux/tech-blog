@@ -1,3 +1,9 @@
 {
-  "extends": ["@repo/config/tsconfig.json"]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": "."
+  }
 }

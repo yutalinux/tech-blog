@@ -1,5 +1,5 @@
 .note {
-  @apply flex gap-2 p-2 rounded-md;
+  @apply flex gap-2 p-2 rounded-md text-neutral-100;
 }
 
 .note p {

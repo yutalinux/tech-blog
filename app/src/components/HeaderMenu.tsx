@@ -3,13 +3,14 @@ import DarkModeSwitch from "./ThemeMenu";
 
 export default function HeaderMenu() {
   const navCn = clsx(
-    "fixed flex justify-center w-full bg-gray-800/20 backdrop-blur h-12 shadow shadow-gray-500/10 z-[30]",
-    "left-0 top-0 transition-colors"
+    "fixed flex justify-between px-20 w-full bg-neutral-100 dark:bg-neutral-900 backdrop-blur h-12 z-[300] items-center",
+    "left-0 top-0 border-b border-neutral-300 dark:border-neutral-600"
   );
 
   return (
     <>
       <nav className={navCn}>
+        <div />
         <div className="flex justify-between items-center w-full max-w-2xl">
           <a href="/">Home</a>
           <ul className="flex list-none gap-4">
@@ -20,8 +21,8 @@ export default function HeaderMenu() {
               <a href="/tech-blog">Blog</a>
             </li>
           </ul>
-          <DarkModeSwitch />
         </div>
+        <DarkModeSwitch />
       </nav>
       <div className="h-12" />
     </>
