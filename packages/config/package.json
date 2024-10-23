@@ -1,7 +1,12 @@
 {
   "name": "@repo/config",
   "version": "1.0.0",
-  "files": [
-    "tsconfig.json"
-  ]
+  "exports": {
+    "./tailwind": {
+      "default": "./tailwind.config.mjs"
+    },
+    "./tsconfig": {
+      "default": "./tsconfig.json"
+    }
+  }
 }

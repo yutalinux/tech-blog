@@ -5,6 +5,10 @@
 @import "./blockquote.css";
 @import "./note.css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* 参考: https://zenn.dev/web_tips/articles/f1167f4314dcb3 */
 
 /* --- テンプレート --- */
