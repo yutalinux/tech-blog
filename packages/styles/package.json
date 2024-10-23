@@ -5,5 +5,8 @@
     ".": {
       "default": "./src/style.css"
     }
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
   }
 }

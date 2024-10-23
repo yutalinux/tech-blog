@@ -2,6 +2,7 @@
 import "@repo/styles";
 import HeaderMenu from "../components/HeaderMenu.astro";
 import "highlight.js/styles/github-dark.css";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -26,6 +27,7 @@ const { title } = Astro.props;
   <body>
     <HeaderMenu />
     <slot />
+    <Footer />
   </body>
 </html>
 

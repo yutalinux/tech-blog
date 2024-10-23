@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { markdownToHtml } from "@repo/parser";
+import markdown2html from "@repo/parser";
 
 import { type Post, getPosts } from "@repo/contents";
 
@@ -22,7 +22,7 @@ type Props = Post;
 const page = Astro.props;
 
 const pubDate = new Date(page.pubDate);
-const updatedDate = new Date(page.updatedDate);
+const updatedDate = page.updatedDate ? new Date(page.updatedDate) : null;
 ---
 
 <Layout title={page.title}>
@@ -34,11 +34,15 @@ const updatedDate = new Date(page.updatedDate);
         <time datetime={pubDate.toISOString()}>
           公開日{pubDate.toLocaleDateString("ja-jp")}
         </time>
-        <time datetime={updatedDate.toISOString()}>
-          更新日{updatedDate.toLocaleDateString("ja-jp")}
-        </time>
+        {
+          updatedDate ? (
+            <time datetime={updatedDate.toISOString()}>
+              更新日{updatedDate.toLocaleDateString("ja-jp")}
+            </time>
+          ) : null
+        }
       </p>
-      <div set:html={markdownToHtml(page.body)} />
+      <div set:html={markdown2html(page.body)} />
     </article>
   </main>
 </Layout>

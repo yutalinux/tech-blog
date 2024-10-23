@@ -1,5 +1,5 @@
 {
-  "name": "@repo/remark-message-plugin",
+  "name": "@repo/remark-note-plugin",
   "version": "1.0.0",
   "exports": {
     ".": {
