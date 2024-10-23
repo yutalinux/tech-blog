@@ -1,4 +1,5 @@
 ---
+import PostCard from "../components/PostCard";
 import Layout from "../layouts/Layout.astro";
 import { getPosts } from "@repo/contents";
 
@@ -10,7 +11,7 @@ const posts = getPosts();
     <article>
       {
         posts.map((post) => {
-          return <a href={`/tech-blog/${post.slug}`}>{post.title}</a>;
+          return <PostCard {...post} />;
         })
       }
     </article>

@@ -32,9 +32,9 @@ _斜体_
 
 ## リンク
 
-[リンク](https://yutalinux.github.io/blog)
+[リンク](https://yutalinux.github.io/tech-blog)
 
-https://yutalinux.github.io/blog
+https://yutalinux.github.io/tech-blog
 
 [リスト](#リスト)
 

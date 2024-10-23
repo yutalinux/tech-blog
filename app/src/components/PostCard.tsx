@@ -1,14 +1,17 @@
 export interface Props {
+  slug: string;
   title: string;
   description: string;
 }
 
-export default function PostCard({ title, description }: Props) {
+export default function PostCard({ slug, title, description }: Props) {
   return (
-    <div className="flex flex-col w-80 h-64 border p-2 rounded-md">
-      <h2 className="text-lg">{title}</h2>
+    <a
+      href={`/tech-blog/${slug}`}
+      className="flex flex-col w-64 h-48 border p-2 rounded-md"
+    >
+      <h2 className="text-2xl">{title}</h2>
       <p>{description}</p>
-      <ul></ul>
-    </div>
+    </a>
   );
 }

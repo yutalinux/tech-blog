@@ -13,7 +13,7 @@
   }
 
   .info {
-    @apply bg-lime-800;
+    @apply bg-lime-700 dark:bg-lime-800;
   }
 
   .info::before {
@@ -21,7 +21,7 @@
   }
 
   .warn {
-    @apply bg-yellow-700;
+    @apply bg-yellow-600 dark:bg-yellow-700;
   }
 
   .warn::before {
@@ -29,7 +29,7 @@
   }
 
   .alert {
-    @apply bg-red-800;
+    @apply bg-red-700 dark:bg-red-800;
   }
 
   .alert::before {

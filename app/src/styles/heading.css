@@ -6,7 +6,7 @@
     @apply my-4;
 
     /* フォント */
-    @apply text-5xl my-4;
+    @apply text-5xl my-4 max-md:text-4xl;
   }
 
   h2 {
