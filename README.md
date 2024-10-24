@@ -9,4 +9,4 @@
 | `packages`             |                              |
 | ├ `config`             | ツール類のコンフィグファイル |
 | ├ `parser`             | マークダウンのパーサー       |
-| ├ `remark-note-plugin` | remark プラグイン            |
+| └ `remark-note-plugin` | remark プラグイン            |
