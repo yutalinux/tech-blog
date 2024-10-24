@@ -74,6 +74,10 @@ article {
     @apply mb-1;
   }
 
+  div {
+    z-index: 0;
+  }
+
   a {
     /* 色 */
     @apply text-blue-600;
