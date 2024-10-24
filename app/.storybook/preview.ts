@@ -1,5 +1,5 @@
 import { withThemeByClassName } from "@storybook/addon-themes";
-import "../src/styles/style.css";
+import "@repo/styles";
 
 export const decorators = [
   withThemeByClassName({

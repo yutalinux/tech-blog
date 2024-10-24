@@ -49,25 +49,27 @@ export interface Post {
  * ブログの記事一覧を取得する
  * @returns 記事の一覧データ
  */
-export function getPosts(): Post[] {
-  // @ts-ignore
-  // const dirname = import.meta.dirname;
-  // const packageDir = path.resolve(dirname, "..");
-  const packageDir = "../contents";
+export function getPosts(packageDir: string = "../contents"): Post[] {
+  try {
+    // @ts-ignore
+    const posts = readdirSync(path.resolve(packageDir, POST_DIR));
 
-  const posts = readdirSync(path.resolve(packageDir, POST_DIR));
-
-  return posts
-    .map((post) => {
-      const fp = path.resolve(packageDir, POST_DIR, post);
-      const parsePath = path.parse(fp);
-      const stat = statSync(fp);
-      if (parsePath.ext !== ".md" || !stat.isFile()) return;
-      const { data, content } = matter({ content: readFileSync(fp, "utf-8") });
-      let result = data as Post;
-      result.slug = parsePath.name;
-      result.body = content;
-      return result;
-    })
-    .filter((post) => post);
+    return posts
+      .map((post) => {
+        const fp = path.resolve(packageDir, POST_DIR, post);
+        const parsePath = path.parse(fp);
+        const stat = statSync(fp);
+        if (parsePath.ext !== ".md" || !stat.isFile()) return;
+        const { data, content } = matter({
+          content: readFileSync(fp, "utf-8"),
+        });
+        let result = data as Post;
+        result.slug = parsePath.name;
+        result.body = content;
+        return result;
+      })
+      .filter((post) => post);
+  } catch {
+    return [];
+  }
 }
